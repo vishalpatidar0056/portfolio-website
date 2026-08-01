@@ -1,8 +1,4 @@
-// ============================================================
-// CONTENT — the only file you should ever need to edit.
-// Add/remove projects, skills, experience, certificates, or
-// websites here and the whole universe rebuilds itself.
-// ============================================================
+
 
 export const content = {
   profile: {
