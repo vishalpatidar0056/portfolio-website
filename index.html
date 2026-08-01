@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vishal Patidar — Mission Log</title>
+<meta name="description" content="Vishal Patidar — BA English Literature student building toward a career in data analytics and GenAI-powered insight work." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- ============ BOOT SEQUENCE ============ -->
+<div id="boot" class="boot">
+  <div class="boot-lines">
+    <p class="boot-line" data-line="0">INITIALIZING UNIVERSE<span class="dots"></span></p>
+    <p class="boot-line" data-line="1">CALIBRATING NAVIGATION<span class="dots"></span></p>
+    <p class="boot-line" data-line="2">SEARCHING FOR INTELLIGENT LIFE<span class="dots"></span></p>
+    <p class="boot-line boot-found" data-line="3">LIFE FOUND</p>
+    <p class="boot-line boot-welcome" data-line="4">WELCOME, EXPLORER</p>
+  </div>
+  <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+  <button id="skipBoot" class="skip-boot">Skip</button>
+</div>
+
+<!-- ============ PERSISTENT 3D BACKGROUND ============ -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div id="cursor" class="cursor" aria-hidden="true">
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+</div>
+
+<!-- ============ HUD NAVIGATION ============ -->
+<header class="hud" id="hud">
+  <div class="hud-brand" id="hudBrand">V.PATIDAR</div>
+  <nav class="hud-nav" id="hudNav" aria-label="Section navigation"></nav>
+  <div class="hud-right">
+    <div class="hud-progress" aria-hidden="true">
+      <span class="hud-progress-label">TRAJECTORY</span>
+      <div class="hud-progress-track"><div class="hud-progress-fill" id="hudProgressFill"></div></div>
+    </div>
+    <button id="recruiterToggle" class="recruiter-toggle" type="button" title="Toggle Recruiter Mode">
+      <span class="recruiter-dot"></span> Recruiter Mode
+    </button>
+  </div>
+</header>
+
+<!-- ============ MAIN CONTENT (rendered dynamically) ============ -->
+<main id="main">
+
+  <section class="scene" id="home" data-planet="home">
+    <canvas class="scene-canvas" data-scene="home"></canvas>
+    <div class="scene-content hero" id="heroContent"></div>
+  </section>
+
+  <section class="scene" id="about" data-planet="about">
+    <canvas class="scene-canvas" data-scene="about"></canvas>
+    <div class="scene-content" id="aboutContent"></div>
+  </section>
+
+  <section class="scene" id="skills" data-planet="skills">
+    <canvas class="scene-canvas" data-scene="skills"></canvas>
+    <div class="scene-content" id="skillsContent"></div>
+  </section>
+
+  <section class="scene" id="experience" data-planet="experience">
+    <canvas class="scene-canvas" data-scene="experience"></canvas>
+    <div class="scene-content" id="experienceContent"></div>
+  </section>
+
+  <section class="scene" id="projects" data-planet="projects">
+    <canvas class="scene-canvas" data-scene="projects"></canvas>
+    <div class="scene-content" id="projectsContent"></div>
+  </section>
+
+  <section class="scene" id="websites" data-planet="websites">
+    <canvas class="scene-canvas" data-scene="websites"></canvas>
+    <div class="scene-content" id="websitesContent"></div>
+  </section>
+
+  <section class="scene" id="certificates" data-planet="certificates">
+    <canvas class="scene-canvas" data-scene="certificates"></canvas>
+    <div class="scene-content" id="certificatesContent"></div>
+  </section>
+
+  <section class="scene" id="contact" data-planet="contact">
+    <canvas class="scene-canvas" data-scene="contact"></canvas>
+    <div class="scene-content" id="contactContent"></div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="footYear"></span> Vishal Patidar — transmitted from Dugarpur, Rajasthan</p>
+  </footer>
+</main>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.1/three.module.js"
+  }
+}
+</script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
